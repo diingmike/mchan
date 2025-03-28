@@ -1,0 +1,287 @@
+/*
+	Theme: Michael Chan;
+	Author: Michael Chan;
+	Date of Creation: Thur, February 20, 2025;
+	Colors: Flat UI, Turkish Palette;
+*/
+
+/* css for all */
+	html, body
+	{
+		font-size: 13px;
+	}
+/* css for all ends */
+
+/* css for header */
+	header
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 50%;
+	}
+
+	header .logo
+	{
+		height: 100px;
+	}
+
+	header .logo img
+	{
+		height: 100%;
+		margin-top: 10px;
+		border-radius: 13px;
+	}
+
+	header ul
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	header ul li
+	{
+		margin-top: 30px;
+		list-style: none;
+		margin-right: 70px;
+	}
+
+	header ul li a
+	{
+		text-decoration: none;
+		color: #7d5fff;
+		padding: 5px 10px;
+		border-radius: 3px;
+	}
+
+	header ul li a:hover
+	{
+		background-color: #7d5fff;
+		color: white;
+	}
+
+	.checkbtn
+	{
+		font-size: 30px;
+		color: #7d5fff;
+		cursor: pointer;
+		display:none;
+	}
+
+	#check
+	{
+		display: none;
+	}
+/* css for header ends */
+
+/* css for latest */
+	.latest
+	{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center-left;
+		flex-direction: row;
+		gap: 50px;
+	}
+
+	.latest img
+	{
+		flex: 1 1 calc(33.33% - 50px); /* 25% for 4 images */
+		max-width: calc(33.33% - 50px);
+		height: auto;
+		border-radius: 13px;
+	}
+/* css for latest ends */
+
+/* css for contact page */
+	.contact
+	{
+		background-color: white;
+		border-radius: 13px;
+		padding: 30px;
+		width: 30%;
+	}
+
+	.contact span
+	{
+		margin-left: 20px;
+		color: #7d5fff;
+		font-weight: bold;
+	}
+/* css for contact page ends */
+
+/* css for page responsiveness */
+	@media screen and (max-width:768px)
+	{
+		.checkbtn
+		{
+			display: block;
+			order: 1;
+			margin-right: 20px;
+		}
+
+		ul
+		{
+			position: fixed;
+			top: 90px;
+			right: -100%;
+			background-color: rgba(0,0,0,0.6);
+			width: 23%;
+			height: 60vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			transition: all 0.3s;
+		}
+
+		ul li
+		{
+			margin: 20px 0;
+		}
+
+		ul li a
+		{
+			background-color: white;
+			color: #7d5fff;
+			font-size: 13px;
+		}
+
+		#check:checked ~ ul
+		{
+			right: 0;
+		}
+
+		header
+		{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+		}
+
+		.latest
+		{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			flex-direction: row;
+			gap: 10px;
+		}
+
+		.latest img
+		{
+			flex: 1 1 calc(33.33% - 10px); /* 25% for 4 images */
+			max-width: calc(33.33% - 10px);
+			height: auto;
+			border-radius: 13px;
+		}
+
+		.contact
+		{
+			background-color: white;
+			border-radius: 13px;
+			padding: 30px;
+			width: 50%;
+		}
+	}
+
+	@media (max-width:425px)
+	{
+		ul
+		{
+			position: fixed;
+			top: 90px;
+			right: -100%;
+			background-color: rgba(0,0,0,0.6);
+			width: 45%;
+			height: 60vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			transition: all 0.3s;
+		}
+
+		.latest
+		{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center-left;
+			flex-direction: row;
+			gap: 10px;
+		}
+
+		.latest img
+		{
+			flex: 1 1 calc(100% - 10px); /* 25% for 4 images */
+			max-width: calc(100% - 10px);
+			height: auto;
+			border-radius: 13px;
+		}
+
+		.contact
+		{
+			background-color: white;
+			border-radius: 13px;
+			padding: 30px;
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width:375px)
+	{
+		ul
+		{
+			position: fixed;
+			top: 90px;
+			right: -100%;
+			background-color: rgba(0,0,0,0.6);
+			width: 80%;
+			height: 60vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			transition: all 0.3s;
+		}
+
+		.latest
+		{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			flex-direction: row;
+			gap: 10px;
+		}
+
+		.latest img
+		{
+			flex: 1 1 calc(100% - 10px); /* 25% for 4 images */
+			max-width: calc(100% - 10px);
+			height: auto;
+			border-radius: 13px;
+		}
+	}
+
+	@media screen and (max-width:320px)
+	{
+		.latest
+		{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			flex-direction: row;
+			gap: 10px;
+		}
+
+		.latest img
+		{
+			flex: 1 1 calc(100% - 10px); /* 25% for 4 images */
+			max-width: calc(100% - 10px);
+			height: auto;
+			border-radius: 13px;
+		}
+	}
+/* css for page responsiveness ends */
