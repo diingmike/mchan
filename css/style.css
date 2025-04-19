@@ -76,6 +76,64 @@
 	}
 /* css for header ends */
 
+/* css for about me */
+	.me
+	{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.define
+	{
+		width: 70%;
+	}
+
+	.pictorial
+	{
+		width: 25%;
+	}
+
+	.about
+	{
+		color: white;
+		background-color: #7d5fff;
+		padding: 20px 20px;
+		border-radius: 13px;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+
+	.about p span
+	{
+		font-weight: bold;
+		font-size: 15px;
+	}
+
+	.work
+	{
+		color: black;
+		background-color: white;
+		padding: 20px 20px;
+		border-radius: 13px;
+		margin-top: 20px;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+
+	.work p span
+	{
+		font-weight: bold;
+		font-size: 15px;
+	}
+
+	.pictorial img
+	{
+		width: 100%;
+		border-radius: 13px;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+/* css for about me ends */
+
 /* css for latest */
 	.latest
 	{
