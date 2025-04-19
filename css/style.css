@@ -134,6 +134,88 @@
 	}
 /* css for about me ends */
 
+/* css for projects page */
+	.web
+	{
+		background-color: #7d5fff;
+		color: white;
+		padding: 20px 20px;
+		border-radius: 13px;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+
+	.project-title
+	{
+		font-size: 15px;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+
+	.websites
+	{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 20px;
+	}
+
+	.websites a
+	{
+		text-decoration: none;
+		color: white;
+	}
+
+	.web-box
+	{
+		width: 100%;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		border-radius: 13px;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+
+	.web-box img
+	{
+		width: 100%;
+		height: 500px;
+	}
+
+	.web-box-info
+	{
+		padding: 11px 11px;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.photo
+	{
+		margin-top: 50px;
+		background-color: white;
+		color: black;
+		padding: 20px 20px;
+		border-radius: 13px;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+
+	.booth
+	{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 20px;
+	}
+
+	.photo-box
+	{
+		width: 100%;
+	}
+
+	.photo-box img
+	{
+		width: 100%;
+		height: 600px;
+		border-radius: 13px;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+/* css for projects page ends */
+
 /* css for contact page */
 	.contact
 	{
