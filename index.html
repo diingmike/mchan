@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang = "en">
-    <head>
-        <title> Michael Chan </title>
-        
+	<head>
+		<title> Michael Chan </title>
+
+		<!--browser icon-->
+        <link   rel = "icon" 
+                href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FFD700"><path d="M13 2L3 14h7v8l10-12h-7z"/></svg>' />
+
         <meta charset = "UTF-8" />
         <meta name = "author" content = "Michael Chan" />
         <meta name = "viewport" content = "width=device-width,initial-scale=1.0" />
@@ -11,35 +15,37 @@
         <link rel = "stylesheet" href = "css/style.css" />
 
         <!--font awesome link-->
-        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" />
 
         <!--google font, Inter-->
         <link rel = "preconnect" href = "https://fonts.googleapis.com" />
         <link rel = "preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href = "https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel = "stylesheet" />
-    </head>
-    
-    <body>
-        <!--header-->
-        <header>
-            <div class = "container">
-                <!--hamburger-->
-                <input type = "checkbox" id = "check" />
+	</head>
+
+	<body>
+		<!--header-->
+		<header>
+			<div class = "container">
+				<!--hamburger-->
+				<input type = "checkbox" id = "check" />
                 <label for = "check" class = "checkbtn">
                     <i class = "fas fa-bars checkbtn-icon"></i>
                 </label>
+                <!--hamburger end-->
 
-                <!--logo-->
+				<!--logo-->
                 <div class = "logo">
-                    <a href = "index.html"> 
-                        <span class="logo_text"> m . <em> Chan </em> </span>
+                    <a href = "index.html">
+                        <span class = "logo-text"> m . <em> Chan </em> </span>
                     </a>
                 </div>
+                <!--logo end-->
 
                 <!--menu-->
                 <nav class = "menu">
-                    <a href = "index.html" class = "nav_link active">
-                        <svg    class = "nav_icon" 
+                    <a href = "index.html" class = "nav-link active">
+                        <svg    class = "nav-icon" 
                                 viewBox = "0 0 16 16" 
                                 fill = "currentColor" 
                                 aria-hidden = "true">
@@ -47,8 +53,8 @@
                         </svg>
                         Home
                     </a>
-                    <a href = "projects.html" class = "nav_link">
-                        <svg    class = "nav_icon" 
+                    <a href = "portfolio.html" class = "nav-link">
+                        <svg    class = "nav-icon" 
                                 viewBox = "0 0 16 16" 
                                 fill = "currentColor" 
                                 aria-hidden = "true">
@@ -57,10 +63,10 @@
                                 <rect x = "1" y = "9" width = "6" height = "6" rx = "1" />
                                 <rect  x = "9" y = "9" width = "6" height = "6" rx = "1" />
                         </svg>
-                        Projects
+                        Portfolio
                     </a>
-                    <a href = "contact.html" class = "nav_link nav_link">
-                        <svg    class = "nav_icon" 
+                    <a href = "contact.html" class = "nav-link">
+                        <svg    class = "nav-icon" 
                                 viewBox = "0 0 16 16" 
                                 fill = "currentColor" 
                                 aria-hidden = "true">
@@ -69,104 +75,267 @@
                         Contact
                     </a>
                 </nav>
-            </div>
-        </header>
-        <!--header ends-->
+                <!--menu end-->
+			</div>
+		</header>
+		<!--header end-->
 
-        <!--banner-->
-        <section class = "banner">
-            <div class = "container">
-                <div class = "banner_grid">
-
-                    <!--left: text-->
-                    <div class = "banner_text">
-                        <p class = "banner_eyebrow">
-                            Web Application Designer <!--&amp; Freelance Photographer-->
-                        </p>
-
-                        <h1>
-                            Michael
-                            <em> Chan. </em>
+		<!--banner-->
+		<section class = "banner">
+			<div class = "container">
+				<div class = "banner-grid">
+					<!--banner text-->
+					<div class = "banner-text">
+						<h1>
+                            Hi, I'm
+                            <em> Michael Chan. </em>
                         </h1>
-                        
-                        <p class = "banner_sub">
-                            Building digital experiences <!--and capturing moments&nbsp;--> —
-                            based in Nairobi.
+
+                        <p class = "banner-sub">
+                        	I'm a Web Application Designer &amp; Developer. <br/>
+                            I create responsive websites and web applications that solve
+                            real business problems using PHP, MySQL, and JavaScript.
                         </p>
 
-                        <div class = "banner_cta">
-                            <a href = "projects.html" class = "btn btn_primary"> View Projects </a>
-                            <a href = "contact.html" class = "btn btn_ghost"> Get in Touch </a>
+                        <div class = "banner-cta">
+                            <a href = "portfolio.html" class = "btn btn-primary"> View My Work </a>
+                            <a href = "contact.html" class = "btn btn-ghost"> Contact Me </a>
                         </div>
-                        <div class = "banner_deco">
-                            <span class = "banner_deco_line"></span>
-                            <span class = "banner_deco_dot"></span>
-                            <span class = "banner_deco_label"> Nairobi, Kenya </span>
+					</div>
+					<!--banner text end-->
+
+					<!--banner photo-->
+					<div class = "banner-photo-wrap">
+                        <div class = "banner-photo">
+                            <img src = "images/me.jpg" alt = "Michael Chan" />
                         </div>
                     </div>
+					<!--banner photo end-->
+				</div>
+			</div>
+		</section>
+		<!--banner end-->
 
-                    <!--right: photo-->
-                    <!--the offset cotton block is drawn with ::before on .banner_photo_wrap-->
-                    <div class = "banner_photo_wrap">
-                        <div class = "banner_photo">
-                            <img src = "images/goat.jpg" alt = "Michael Chan" />
+		<!--trusted technologies-->
+		<section class = "trusted-technologies">
+		    <div class = "container">
+		        <h2 class = "tech-title"> Trusted Technologies </h2>
+		        <ul class = "tech-list">
+		            <li> <i class = "fa-brands fa-php"></i> PHP </li>
+		            <li> <i class = "fa-solid fa-database"></i> MySQL </li>
+		            <li> <i class = "fa-brands fa-js"></i> JavaScript </li>
+		            <li> <i class = "fa-brands fa-html5"></i> HTML5 </li>
+		            <li> <i class = "fa-brands fa-css3-alt"></i> CSS3 </li>
+		        </ul>
+		    </div>
+		</section>
+		<!--trusted technologies end-->
+
+		<!--featured projects-->
+		<section class = "featured-projects">
+			<div class = "container">
+				<div class = "section-head">
+                    <h2 class = "section-heading"> Featured Projects </h2>
+                </div>
+
+                <!--project grid-->
+                <div class = "project-grid">
+                	<article class = "project-card">
+                        <div class = "project-thumb">
+                            <img src = "images/live-websites/talanta.jpg" alt = "Talanta Sports Arena" />
                         </div>
+                        <div class = "project-info">
+                            <span class = "project-tag"> Sports Platform </span>
+                            <h3 class = "project-title"> Talanta Sports Arena </h3>
+                            <a href = "https://diingmike.github.io/talanta/" class = "project-link"> View Project </a>
+                        </div>
+                    </article>
+
+                    <article class = "project-card">
+                        <div class = "project-thumb">
+                            <img src = "images/live-websites/miss-hair.jpg" alt = "Miss Hair Affair" />
+                        </div>
+                        <div class = "project-info">
+                            <span class = "project-tag"> E-Commerce </span>
+                            <h3 class = "project-title"> Miss Hair Affair </h3>
+                            <a href = "https://diingmike.github.io/misshairaffair/" class = "project-link"> View Project </a>
+                        </div>
+                    </article>
+
+                    <article class = "project-card">
+                        <div class = "project-thumb">
+                            <img src = "images/live-websites/hassan-luk.jpg" alt = "Hassan Luk Advocates" />
+                        </div>
+                        <div class = "project-info">
+                            <span class = "project-tag"> Law Firm Website </span>
+                            <h3 class = "project-title"> Hassan Luk Advocates </h3>
+                            <a href = "https://chan-rebecca.github.io/hassanlukadvocates/" class = "project-link"> View Project </a>
+                        </div>
+                    </article>
+                </div>
+                <!--project grid end-->
+
+                <div class = "featured-projects-footer">
+                    <a href = "portfolio.html" class = "btn btn-ghost"> View All Projects </a>
+                </div>
+			</div>
+		</section>
+		<!--featured projects end-->
+
+		<!--services-->
+		<section class = "services">
+			<div class = "container">
+				<div class = "section-head">
+                    <h2 class = "section-heading"> Services </h2>
+                </div>
+
+                <!--services grid-->
+                <div class = "services-grid">
+                    <div class = "service-card">
+                        <span class = "service-icon"> <i class = "fa-solid fa-pen-ruler"></i> </span>
+                        <h3 class = "service-title"> Website Design </h3>
+                        <p class = "service-desc"> Clean, purposeful layouts built around your content and your customers. </p>
                     </div>
 
+                    <div class = "service-card">
+                        <span class = "service-icon"> <i class = "fa-solid fa-code"></i> </span>
+                        <h3 class = "service-title"> Web Applications </h3>
+                        <p class = "service-desc"> Custom PHP and MySQL platforms — admin panels, e-commerce, booking systems. </p>
+                    </div>
+
+                    <div class = "service-card">
+                        <span class = "service-icon"> <i class = "fa-solid fa-database"></i> </span>
+                        <h3 class = "service-title"> Database Systems </h3>
+                        <p class = "service-desc"> Structured, secure data models that scale as your business grows. </p>
+                    </div>
+
+                    <div class = "service-card">
+                        <span class = "service-icon"> <i class = "fa-solid fa-layer-group"></i> </span>
+                        <h3 class = "service-title"> UI/UX Design </h3>
+                        <p class = "service-desc"> Interfaces people enjoy using, from wireframe through to final polish. </p>
+                    </div>
+                </div>
+                <!--services grid end-->
+			</div>
+		</section>
+		<!--services end-->
+
+		<!--why me-->
+        <section class = "why-me">
+            <div class = "container">
+                <div class = "why-grid">
+                    <div class = "why-intro">
+                        <h2 class = "section-heading section-heading--light"> Why Work With Me? </h2>
+                        <p class = "why-sub">
+                            Every project is held to the same standard, whether it's a
+                            five-page brochure site or a full admin platform.
+                        </p>
+                    </div>
+
+                    <ul class = "why-list">
+                        <li> <span class = "why-check"> <i class = "fa-solid fa-check"></i> </span> Responsive Design </li>
+                        <li> <span class = "why-check"> <i class = "fa-solid fa-check"></i> </span> Clean Code </li>
+                        <li> <span class = "why-check"> <i class = "fa-solid fa-check"></i> </span> Fast Performance </li>
+                        <li> <span class = "why-check"> <i class = "fa-solid fa-check"></i> </span> Modern UI </li>
+                    </ul>
                 </div>
             </div>
         </section>
-        <!--banner ends-->
+        <!--why me end-->
 
-        <!--about-->
+        <!--about me-->
         <section class = "about">
-            <div class = "container">
-                <div class = "about_grid">
+        	<div class = "container">
+        		<div class = "about-grid">
+        			<!--photo panel-->
+        			<div class = "about-photo-wrap">
+                        <div class = "about-photo">
+                            <img src = "images/me.jpg" alt = "Michael Chan" />
+                        </div>
+                    </div>
+                    <!--photo panel end-->
 
-                    <!--dark card: About Me-->
-                    <article class = "card card_dark">
-                        <span class = "card_label"> About Me </span>
-                        <h2 class = "card_heading"> Organised,<br /> deadline-driven. </h2>
-                        <div class = "card_divider"></div>
+                    <!--about info-->
+                    <article class = "card card-dark">
+                        <span class = "card-label"> About Me </span>
+                        <h2 class = "card-heading"> Organised,<br /> quality-driven. </h2>
+                        <div class = "card-divider"></div>
+                        <p>
+                            I am a passionate Web Application Designer and Developer 
+                            dedicated to building modern, responsive, and user-friendly digital solutions.
+                        </p>
+
                         <p>
                             I am enthusiastic and highly organised. I know the value of time
                             management and so I work hard to ensure deadlines are met in the work that I
                             undertake. I take pride in my work and strive to reach and
                             maintain high quality standards.
                         </p>
-                    </article>
 
-                    <!--light card: What I Do-->
-                    <article class = "card card_light">
-                        <span class = "card_label"> What I Do </span>
-                        <h2 class = "card_heading"> Web Design <!--&amp;<br /> Photography.--> </h2>
                         <p>
-                            I am a web application designer. I design display websites, and also interactive sites like
-                            booking systems and other e-commerce systems.
+                            In a fast-evolving tech landscape, I continuously push my limits to learn, adapt, and grow my skills.
                         </p>
-                        <!--<p class = "card_note">
-                            I'm also a part-time photographer at <strong> Press Play Media. </strong>
-                            We do — studio portraits, birthday shoots, and corporate shoots.
-                        </p>-->
                     </article>
+                    <!--about info end-->
+        		</div>
+        	</div>
+        </section>
+        <!--about me end-->
 
-                </div>
+        <!--cta-->
+        <section class = "cta">
+            <div class = "container">
+                <h2 class = "cta-heading">
+                    Let's build your next project, <em> together. </em>
+                </h2>
+                <a href = "contact.html" class = "btn btn-primary cta-btn"> Get In Touch </a>
             </div>
         </section>
-        <!--about ends-->
+        <!--cta end-->
 
         <!--footer-->
-        <footer class = "footer">
-            <div class = "container">
-                <div class = "footer_inner">
-                    <p class = "footer_copy"> &copy; <span id = "year"></span> Michael Chan </p>
-                    <p class = "footer_tagline"> Diamond in a rough </p>
-                </div>
-            </div>
-        </footer>
-        <!--footer ends-->
+        <footer>
+        	<div class = "container">
+        		<div class = "footer-nav">
+        			<a href = "index.html"> <!--icon here--> Home </a>
+        			<a href = "portfolio.html"> <!--icon here--> Portfolio </a>
+        			<a href = "contact.html"> <!--icon here--> Contact </a>
+        		</div>
 
-        <!--javascript-->
-        <script src = "js/script.js"></script>
-    </body>
+        		<hr/>
+
+        		<div class = "footer-brand">
+                    <p class = "footer-copy"> &copy; <span id = "year"></span> Michael Chan </p>
+                </div>
+        	</div>
+        </footer>
+        <!--footer end-->
+
+        <!--whatsapp chat-->
+		<a	href = "https://wa.me/254790039574"
+			class = "whatsapp-btn"
+			id = "whatsappBtn"
+			target = "_blank"
+			rel = "noopener noreferrer"
+			aria-label = "Chat with us on WhatsApp"
+			title = "Chat on WhatsApp">
+			<i class = "fab fa-whatsapp"></i>
+		</a>
+		<!--whatsapp chat end-->
+
+        <!--go up btn-->
+        <button class = "back-to-top" id = "backToTop" aria-label = "Back to top" title = "Back to top">
+		  	<i class = "fas fa-chevron-up"></i>
+		  	<svg 	class = "back-to-top-ring" 
+		  			viewBox = "0 0 44 44" 
+		  			aria-hidden="true">
+		    		<circle cx = "22" cy = "22" r = "20" />
+		  	</svg>
+		</button>
+        <!--go up btn end-->
+
+		<!--JS link-->
+		<script src = "js/script.js"></script>
+		<!--JS link end-->
+	</body>
 </html>
