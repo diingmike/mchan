@@ -1,55 +1,112 @@
-// script for year
-	document.getElementById("year").textContent = new Date().getFullYear();
+// JS for mobile nav
+	(function () 
+	{
+	    document.addEventListener("DOMContentLoaded", () => {
+	        const check = document.getElementById("check");
+	        const header = document.querySelector("header");
 
-//script for icon colour swap on hover, projects page
-    document.querySelectorAll(".web_card").forEach(function(card) 
-    {
-        card.addEventListener("mouseenter", function() 
-        {
-            card.querySelectorAll(".icon_fill").forEach(function(el) { el.setAttribute("fill", "#f7c8ff"); });
-            card.querySelectorAll(".icon_stroke").forEach(function(el) { el.setAttribute("stroke", "#f7c8ff"); });
-            card.querySelectorAll(".arrow_svg").forEach(function(el) { el.setAttribute("stroke", "#f7c8ff"); });
-        });
+	        if (!check || !header) return;
 
-        card.addEventListener("mouseleave", function() 
-        {
-            card.querySelectorAll(".icon_fill").forEach(function(el) { el.setAttribute("fill", "#430a4d"); });
-            card.querySelectorAll(".icon_stroke").forEach(function(el) { el.setAttribute("stroke", "#430a4d"); });
-            card.querySelectorAll(".arrow_svg").forEach(function(el) { el.setAttribute("stroke", "#430a4d"); });
-        });
-    });
+	        check.addEventListener("change", () => 
+	        {
+	            document.body.classList.toggle("menu-open", check.checked);
+	        });
 
-// script for icon colour swap on hover, contact page
-    document.querySelectorAll(".contact_card").forEach(function(card) 
-    {
-        card.addEventListener("mouseenter", function() 
-        {
-            card.querySelectorAll(".ci").forEach(function(el) 
-            {
-                if (el.getAttribute("stroke") && el.getAttribute("stroke") !== "none") el.setAttribute("stroke", "#f7c8ff");
-                if (el.getAttribute("fill") && el.getAttribute("fill") !== "none") el.setAttribute("fill", "#f7c8ff");
-            });
+	        document.addEventListener("click", (e) => 
+	        {
+	            if (check.checked && !header.contains(e.target)) 
+	            {
+	                check.checked = false;
+	                document.body.classList.remove("menu-open");
+	            }
+	        });
 
-            card.querySelectorAll(".ci_dot").forEach(function(el) 
-            { 
-                el.setAttribute("fill", "#f7c8ff"); 
-            });
+	        document.addEventListener("keydown", (e) => 
+	        {
+	            if (e.key === "Escape" && check.checked) 
+	            {
+	                check.checked = false;
+	                document.body.classList.remove("menu-open");
+	            }
+	        });
+	    });
+	})();
 
-            card.querySelectorAll(".cv").forEach(function(el) 
-            { 
-                el.setAttribute("stroke", "#f7c8ff"); 
-            });
-        });
+// JS for footer year and back to top
+	(function () 
+	{
+	    document.addEventListener("DOMContentLoaded", () => 
+	    {
+	        // auto-fill copyright year
+	        const yearEl = document.getElementById("year");
+	        if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-        card.addEventListener("mouseleave", function() 
-        {
-            card.querySelectorAll(".ci").forEach(function(el) 
-            {
-                if (el.getAttribute("stroke") && el.getAttribute("stroke") !== "none") el.setAttribute("stroke", "#430a4d");
-                if (el.getAttribute("fill") && el.getAttribute("fill") !== "none") el.setAttribute("fill", "#430a4d");
-            });
+	        const backToTop = document.getElementById("backToTop");
+	        if (!backToTop) return;
 
-            card.querySelectorAll(".ci_dot").forEach(function(el) { el.setAttribute("fill", "#430a4d"); });
-            card.querySelectorAll(".cv").forEach(function(el) { el.setAttribute("stroke", "#430a4d"); });
-        });
-    });
+	        const ring = backToTop.querySelector(".back-to-top-ring circle");
+	        const circumference = 125.6; // matches stroke-dasharray in CSS
+
+	        const updateButton = () => 
+	        {
+	            const scrollTop = window.scrollY;
+	            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+	            const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+
+	            // show button after scrolling down a bit
+	            backToTop.classList.toggle("is-visible", scrollTop > 400);
+
+	            // update ring progress
+	            if (ring) 
+	            {
+	                const offset = circumference - (progress * circumference);
+	                ring.style.strokeDashoffset = offset;
+	            }
+	        };
+
+	        window.addEventListener("scroll", updateButton, { passive: true });
+	        updateButton(); // set initial state on load
+
+	        backToTop.addEventListener("click", () => 
+	        {
+	            window.scrollTo({ top: 0, behavior: "smooth" });
+	        });
+	    });
+	})();
+
+// JS for FAQs in contact page
+	(function () 
+	{
+	    document.addEventListener("DOMContentLoaded", () => 
+	    {
+	        const faqItems = document.querySelectorAll(".faq-item");
+	        if (!faqItems.length) return;
+
+	        faqItems.forEach((item) => 
+	        {
+	            const question = item.querySelector(".faq-question");
+	            const answer = item.querySelector(".faq-answer");
+	            if (!question || !answer) return;
+
+	            question.addEventListener("click", () => 
+	            {
+	                const isOpen = question.getAttribute("aria-expanded") === "true";
+
+	                // close all other open items (single-open accordion)
+	                faqItems.forEach((other) => 
+	                {
+	                    if (other === item) return;
+	                    const otherQuestion = other.querySelector(".faq-question");
+	                    const otherAnswer = other.querySelector(".faq-answer");
+	                    if (!otherQuestion || !otherAnswer) return;
+	                    otherQuestion.setAttribute("aria-expanded", "false");
+	                    otherAnswer.style.maxHeight = null;
+	                });
+
+	                // toggle this item
+	                question.setAttribute("aria-expanded", String(!isOpen));
+	                answer.style.maxHeight = isOpen ? null : answer.scrollHeight + "px";
+	            });
+	        });
+	    });
+	})();
